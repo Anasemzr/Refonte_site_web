@@ -1,0 +1,28 @@
+.contact-card{
+  margin-top: 150px;
+}
+.contact-card-body{
+  width: 75%;
+}
+
+article{
+  transition: all 0.1s;
+}
+
+article:hover{
+  transform: scale(1.05);
+}
+
+article:first-child{
+  animation: slideToRight 0.3s;
+}
+
+article:last-child{
+  animation: slideToLeft 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-card{
+    margin-top: 230px;
+  }
+}

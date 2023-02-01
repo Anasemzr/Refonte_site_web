@@ -1,0 +1,215 @@
+ /* --------- card-custom Animation ---------- */
+ .card-custom:not(:empty):hover,
+ .card-custom:not(:empty):focus{
+   z-index: 1;
+   color: #ffffff;
+   opacity: 1;
+   transform: scale(1.01);
+   cursor: pointer;
+ }
+ .card-custom:not(:empty):hover:after,
+ .card-custom:not(:empty):focus:after{
+   opacity: 1;
+ 
+ }
+ .card-custom:not(:empty):hover:before,
+ .card-custom:not(:empty):focus:before 
+ {
+   opacity: 0;
+   
+ }
+ 
+ .card-custom {
+   padding: 10px;
+   /*background-image: url("https://www.ou-et-quand.net/partir/images/illustration/oualler/guadeloupe-basse-terre_46.jpg");*/
+   background-size: cover;
+   color: #ffffff;
+   border-radius: 0.7em;
+   opacity: 0.6;
+   transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+   transition-property: transform, color, opacity;
+   transition: all 1s;
+   
+ }  
+ .card-custom:not(:empty):before {
+   box-shadow: -2px 2px 8px 2px hsla(0deg, 0%, 0%, 0.2);
+ }
+ .card-custom:empty {
+   opacity: 0.3;
+ }
+ .card-custom:before, .card-custom:after {
+   content: "";
+   position: absolute;
+   border-radius: 0.7em;
+   z-index: -1;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transition: opacity 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+ }
+ .card-custom:after {
+   box-shadow: -20px 20px 12px 6px hsla(0deg, 0%, 0%, 0.2);
+   opacity: 0;
+   
+ }
+ 
+ /* --------- Grid ---------- */
+ .grid {
+   width: 80%;
+   height: 100%;
+   /* padding: 20px; */
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(1, 1fr);
+   grid-gap: 20px;
+   margin-top: 10%;
+   margin-bottom: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   
+   
+ }
+ 
+ .item0 {
+   grid-area: 1/1/1/5;
+ }
+ 
+ .item1 {
+  grid-area: 2/1/2/3;
+ }
+ 
+ .item2 {
+   grid-area: 2/3/2/3;
+   padding-bottom: 3em;
+ }
+ 
+ .item3 {
+    grid-area: 3/2/4/2;
+    padding-bottom: 3em;
+ }
+ 
+ .item4 {
+   grid-area: 4/3/6/3;
+   padding-bottom: 3em;
+ }
+ 
+ .item5 {
+   grid-area: 6/3/9/3;
+ }
+ 
+ .item7 {
+    grid-area: 5/1/5/3;
+   padding-bottom: 15em;
+ }
+ 
+ .item9 {
+  grid-area: 3/1/5/1;
+ }
+ 
+ .item10 {
+   grid-area: 9/2/15/4;
+   padding-bottom: 7em;
+ }
+ 
+ .item11 {
+  grid-area: 6/1/9/3;
+ }
+
+ .item12 {
+  grid-area: 9/1/15/1;
+}
+
+.item13 {
+  grid-area: 3/3/4/3;
+}
+ 
+ .content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+ 
+ /*--------- Layout -------- */
+ *,
+ *:before,
+ *:after {
+   position: relative;
+   box-sizing: border-box;
+ }
+ 
+ body.actu{
+   font-family: "PT Sans", sans-serif;
+   background: var(--bg-page);
+ 
+ }
+
+ 
+ 
+ 
+ .card-custom h4, .card-custom p {
+ }
+ 
+ .contentUp h1 {
+
+   font-size: 3.052em;
+   
+ }
+ 
+ 
+ .card-custom p {
+   line-height: 1.3;
+   visibility: hidden;
+   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+   max-height: 80%;
+ }
+
+ .card-custom button{
+    border: 0px;
+    padding: 0.3em;
+    border-radius: 10px 100px / 120px;
+    visibility: hidden;
+    position: absolute;
+    right: 1em;
+ }
+
+ 
+ 
+ /* --------- Responsive ---------- */
+
+
+ @media only screen and (max-width: 990px) {
+  
+  .grid {
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    max-height: 50%;
+    display: block;
+    margin-top: 15em;
+  }
+  .card-custom {
+    margin: 2em auto ;
+    grid-area: auto;
+    text-align: left;
+  }
+  .card-custom:empty {
+    display: none;
+  }
+
+  .card-custom button{
+    position: relative;
+    right: 0em;
+ }
+}
+
+@media only screen and (min-width: 2500px) {
+  
+  .grid{
+    margin-top: 5%;
+  }
+}
+
+ 
+ .AllSpace{
+  height: auto;
+}
